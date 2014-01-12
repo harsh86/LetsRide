@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<head>
+<style type="text/css">
+.gm-style .gm-style-mtc label,.gm-style .gm-style-mtc div {
+	font-weight: 400
+}
+</style>
+<style type="text/css">
+.gm-style .gm-style-cc span,.gm-style .gm-style-cc a,.gm-style .gm-style-mtc div
+	{
+	font-size: 10px
+}
+</style>
+<link type="text/css" rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+<style type="text/css">
+@media print {
+	.gm-style .gmnoprint,.gmnoprint {
+		display: none
+	}
+}
+
+@media screen {
+	.gm-style .gmnoscreen,.gmnoscreen {
+		display: none
+	}
+}
+</style>
+<style type="text/css">
+.gm-style div,.gm-style span,.gm-style label,.gm-style a {
+	font-family: Roboto, Arial, sans-serif;
+	font-size: 11px;
+	font-weight: 400
+}
+
+.gm-style div,.gm-style span,.gm-style label {
+	text-decoration: none
+}
+
+.gm-style img {
+	border: 0;
+	padding: 0;
+	margin: 0
+}
+</style>
+<style type="text/css">
+@charset "UTF-8"; 
+
+[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide
+	{
+	display: none !important;
+}
+
+ng\:form {
+	display: block;
+}
+
+.ng-animate-start {
+	border-spacing: 1px 1px;
+	-ms-zoom: 1.0001;
+}
+
+.ng-animate-active {
+	border-spacing: 0px 0px;
+	-ms-zoom: 1;
+}
+</style>
+<meta charset="utf-8">
+<title>Lets Ride</title>
+<meta name="viewport"
+	content="initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="description"
+	content="Find events going on around you or near a location.">
+
+<!-- ionic css -->
+<link href="css/ionic.css" rel="stylesheet">
+
+<!-- app's css -->
+<!--     <link href="css/app.css" rel="stylesheet"> -->
+<link rel="shortcut icon" href="img/favicon.ico">
+
+
+<!-- ionic/angularjs scripts -->
+<script
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPTuWtdL0JlVUiscO9arznZVHGNmTaWvI&amp;sensor=true"></script>
+<!--     <script src="https://maps.gstatic.com/intl/en_us/mapfiles/api-3/15/6/main.js" type="text/javascript"></script> -->
+<script src="js/eventful.js"></script>
+
+<!-- ionic css -->
+<link href="css/ionic.css" rel="stylesheet">
+
+<!-- your app's css -->
+<link href="css/app.css" rel="stylesheet">
+
+<!-- Mix Panel -->
+<script type="text/javascript" async="" src="http://cdn.mxpnl.com/libs/mixpanel-2.2.min.js" style=""></script>
+<script>
+      (function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+      typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+      b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+      mixpanel.init("b1a1d131cd64420baef4b67b465e8dd4");
+</script>
+<!-- Mix Panel -->
+
+<!-- ionic/angularjs scripts -->
+<script src="js/ionic.js"></script>
+<script src="js/angular/angular.js"></script>
+<script src="js/angular/angular-animate.js"></script>
+<script src="js/angular/angular-route.js"></script>
+<script src="js/angular/angular-touch.js"></script>
+<script src="js/angular/angular-sanitize.js"></script>
+<script src="js/ionic-angular.js"></script>
+
+<!-- cordova script -->
+<script src="js/cordova.js"></script>
+
+<!-- your app's script -->
+<script src="js/app.js"></script>
+<script src="js/service.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/markCluster.js"></script>
+<script src="js/markSpider.js"></script>
+</head>
+
+<!-- 'starter' is the name of this angular module (js/app.js)-->
+<body ng-app="maparound">
+
+	
+<side-menus>
+  <!-- Center content -->
+  <pane side-menu-content>
+	<header class="bar bar-header bar-assertive">
+		<button class="button button-icon">
+			
+				<button class="button button-icon icon ion-navicon" ></button>
+				<div class="h1 title">Lets Ride</div>
+				<button class="button button-clear ">Ride Options</button>
+		</button>
+	</header>
+	<ng-view></ng-view>
+	</pane>
+
+  <!-- Left menu -->
+  <side-menu side="left">
+          <header class="bar bar-header bar-assertive ng-scope">
+            <h1 class="title">Left</h1>
+          </header>
+          <div class="scroll-content ng-scope ng-isolate-scope has-header" has-header="true">
+          <div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);">
+            <ul class="list ng-scope">
+              <a href="#" class="item ng-scope ng-binding" >
+                Home
+              </a><a href="#" class="item ng-scope ng-binding" >
+                My account
+              </a><a href="#" class="item ng-scope ng-binding" >
+                Signout
+              </a>
+            </ul>
+          </div></div>
+  </side-menu>
+
+  <!-- Right menu -->
+  <side-menu side="right">
+    <header class="bar bar-header bar-assertive ng-scope">
+            <h1 class="title">Left</h1>
+          </header>
+          <div class="scroll-content ng-scope ng-isolate-scope has-header" has-header="true">
+          <div class="scroll" style="-webkit-transform: translate3d(0px, 0px, 0px) scale(1);">
+            <ul class="list ng-scope">
+              <a href="#" class="item ng-scope ng-binding" >
+                Create Ride
+              </a><a href="#" class="item ng-scope ng-binding" >
+                Ride Near Me
+              </a><a href="#" class="item ng-scope ng-binding" >
+                Contacts
+              </a>
+            </ul>
+          </div></div>
+  </side-menu>
+</side-menus>
+
+</body>
+</html>
