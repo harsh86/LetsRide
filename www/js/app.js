@@ -11,13 +11,6 @@ angular.module('maparound', ['ionic',
 	    controller: 'MapCtrl'
 	  });
 
-//	  // if the url matches something like /pet/2 then this route
-//	  // will fire off the PetCtrl controller (controllers.js)
-//	  $routeProvider.when('/pet/:petId', {
-//	    templateUrl: 'templates/pet.html',
-//	    controller: 'PetCtrl'
-//	  });
-//
 	  // if none of the above routes are met, use this fallback
 	  // which executes the 'AppCtrl' controller (controllers.js)
 	  $routeProvider.otherwise({

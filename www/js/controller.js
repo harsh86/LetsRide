@@ -119,10 +119,14 @@ angular.module('maparound.controller', [])
     zoom: 4,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     disableDefaultUI: true,
+    panControl: true,
+    zoomControl: true,
+    scaleControl: true,
     mapTypeControl: true,
+    streetViewControl:true,
     mapTypeControlOptions: {
       style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-      position: google.maps.ControlPosition.TOP_CENTER,
+      position: google.maps.ControlPosition.TOP_RIGHT,
       mapTypeIds: [google.maps.MapTypeId.ROADMAP, google.maps.MapTypeId.SATELLITE]
     }
   });
